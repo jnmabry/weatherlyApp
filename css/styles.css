@@ -1,0 +1,107 @@
+
+/*TYPOGRAPHY*/
+
+#topRow{
+    color:white;
+}
+
+#logo{
+    font-family: 'Pacifico', cursive;
+    text-transform: none;
+    font-size: 60px;
+    color: #458782;
+}
+
+h1{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 40px;
+    margin-top: 40px;
+    margin-bottom: 0px;
+    letter-spacing: 3px;
+}
+
+h2{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 130px;
+    margin-top: 5px;
+    letter-spacing: 2px;
+}
+
+h3{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin-top:5px;
+    letter-spacing: 2px;
+}
+
+.fa{
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 50px;
+
+}
+
+.wi{
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 40px;
+
+}
+
+.nav{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: cornflowerblue;
+}
+
+ul > span{
+    font-size: 45px;
+    color: #458782;
+}
+
+.fa{
+    color: white;
+}
+
+/* Containers */
+
+#topRow {
+    margin-top: 0px;
+    margin-bottom:10px;
+}
+
+.thumbnail {
+    border-radius: 10px;
+    padding-bottom: 20px;
+    background-color: cornflowerblue;
+    box-shadow: 1px 4px 6px #888888;
+    
+}
+
+.navbar{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+}
+
+.card{
+    margin-bottom: 10px; 
+}
+
+ul > li {
+    margin-right: 15px;
+}
+
+body{
+    background-color: white;
+}
