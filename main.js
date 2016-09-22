@@ -24,14 +24,20 @@ function geocode_Complete(results) {
 }
 
 // Test Section for Handling Geocode Zip
-function geocodeZip() {
+function geoUserInput() {
     var zipCode = $("#submit").val();
+  
+    var geocodeRequest = {
+    url: "https://maps.googleapis.com/maps/api/geocode/json?address=41164&key=AIzaSyA2Q8skYQhVnVaDlSx_L-VEXFvl-dd1e-Q",
+    dataType: "json",
+    success: geocode_Complete
+};
+
+
 }
-
-
 
 $(function(){
     $.ajax(geocodeRequest);
     $.ajax(darkskyRequest);
-    console.log();
+    $("#submit").on("click", geoUserInput);
 });
