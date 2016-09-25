@@ -105,3 +105,9 @@ ul > li {
 body{
     background-color: white;
 }
+
+#remove{
+    padding-top: 10px;
+    padding-right: 10px;
+    font-size: 22px;
+}

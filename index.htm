@@ -24,104 +24,45 @@
 
     <link rel="stylesheet" href="css/weather-icons.min.css" type="text/css">
 
-
 </head>
 
 <body>
 
+<!--Nav Bar Contents-->
 
-    <nav class="navbar navbar-fixed navbar-dark bg-inverse">
-        <a class="navbar-brand" id="logo">weatherly</a>
-        <ul class="nav navbar-nav pull-right">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Local</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Regional</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">News</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Radar</a>
-            </li>
-            <span class="glyphicon glyphicon-plus-sign"></span>
-        </ul>
+<nav class="navbar navbar-fixed navbar-dark bg-inverse text-center">
+    <a class="navbar-brand text-center" id="logo">weather.ly</a><br />
 
-    </nav><br />
+    <ul class="nav navbar-nav pull-right">
+        <li class="nav-item active">
+            <a class="nav-link" href="#">Local</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Regional</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">News</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Radar</a>
+        </li>
+        <span class="glyphicon glyphicon-plus-sign"></span>
+    </ul>
+
+</nav><br />
+
+<!--Start of Body Contents-->
 
     <div class="container">
 
         <div class="row" id="topRow">
 
-            <div class="col-md-4 col-xs-12 col-sm-6 card">
+            <div class="col-md-4 col-xs-12 col-sm-6 card" style="display:none;">
                 <div class="thumbnail">
+                    <span class="glyphicon glyphicon-minus-sign pull-right" id="remove"></span>
                     <h1 class="text-center">Olive Hill, KY</h1>
                     <h3 class="text-center">Friday, September 21</h3>
                     <h2 class="text-center">91&deg;</h2>
-                    <div class="caption text-center">
-                        <span class="wi wi-umbrella"><h3>50%</h3></span>
-                        <span class="wi wi-thermometer"><h3>91&deg;</h3></span>
-                        <span class="wi wi-thermometer-exterior"><h3>85&deg;</h3></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-xs-12 col-sm-6 card">
-                <div class="thumbnail">
-                    <h1 class="text-center">Louisville, KY</h1>
-                    <h3 class="text-center">Friday, September 21</h3>
-                    <h2 class="text-center">75&deg;</h2>
-                    <div class="caption text-center">
-                        <span class="wi wi-umbrella"><h3>50%</h3></span>
-                        <span class="wi wi-thermometer"><h3>91&deg;</h3></span>
-                        <span class="wi wi-thermometer-exterior"><h3>85&deg;</h3></span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-xs-12 col-sm-6 card">
-                <div class="thumbnail">
-                    <h1 class="text-center">Tampa, FL</h1>
-                    <h3 class="text-center">Friday, September 21</h3>
-                    <h2 class="text-center">87&deg;</h2>
-                    <div class="caption text-center">
-                        <span class="wi wi-umbrella"><h3>50%</h3></span>
-                        <span class="wi wi-thermometer"><h3>91&deg;</h3></span>
-                        <span class="wi wi-thermometer-exterior"><h3>85&deg;</h3></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-xs-12 col-sm-6 card">
-                <div class="thumbnail">
-                    <h1 class="text-center">Olive Hill, KY</h1>
-                    <h3 class="text-center">Friday, September 21</h3>
-                    <h2 class="text-center">91&deg;</h2>
-                    <div class="caption text-center">
-                        <span class="wi wi-umbrella"><h3>50%</h3></span>
-                        <span class="wi wi-thermometer"><h3>91&deg;</h3></span>
-                        <span class="wi wi-thermometer-exterior"><h3>85&deg;</h3></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-xs-12 col-sm-6 card">
-                <div class="thumbnail">
-                    <h1 class="text-center">Louisville, KY</h1>
-                    <h3 class="text-center">Friday, September 21</h3>
-                    <h2 class="text-center">75&deg;</h2>
-                    <div class="caption text-center">
-                        <span class="wi wi-umbrella"><h3>50%</h3></span>
-                        <span class="wi wi-thermometer"><h3>91&deg;</h3></span>
-                        <span class="wi wi-thermometer-exterior"><h3>85&deg;</h3></span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-xs-12 col-sm-6 card">
-                <div class="thumbnail">
-                    <h1 class="text-center">Tampa, FL</h1>
-                    <h3 class="text-center">Friday, September 21</h3>
-                    <h2 class="text-center">87&deg;</h2>
                     <div class="caption text-center">
                         <span class="wi wi-umbrella"><h3>50%</h3></span>
                         <span class="wi wi-thermometer"><h3>91&deg;</h3></span>
@@ -130,7 +71,6 @@
                 </div>
             </div>
         </div>
-
 
 <div class="row">
 
@@ -143,6 +83,7 @@
             <button id="submit">Submit</button>
             <br /> <br />
         </fieldset>
+        
 </div>
 
 
