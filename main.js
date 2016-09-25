@@ -25,6 +25,7 @@
 // }
 
 
+
 var city =  0;
 var state = 0;
 
@@ -55,7 +56,7 @@ function darksky_Complete(geocode_Complete) {
     var maxTemp = geocode_Complete.daily.data[0].temperatureMax;
     var minTemp = geocode_Complete.daily.data[0].temperatureMin;
     var precip = geocode_Complete.daily.data[0].precipProbability;
-    
+
     
     var hour1 = geocode_Complete.hourly.data[0];
     var time = new Date(hour1.time * 1000);
@@ -77,18 +78,18 @@ function darksky_Complete(geocode_Complete) {
     templateHTML += '</div>';
     templateHTML += '</div>';
 
-    $('#topRow').append(templateHTML);
-   
-    $("#remove").on("click", removeCard);
-    function removeCard(){
-    console.log("Remove worked!");
-    $(this).parent().remove();
+    $('#topRow').append(templateHTML)
+
+    $("body").on("click", "#remove", function(){
+        $(this).parent().remove();
+    });
 
 }
 
-}
-
-
+    function removeCard (){
+        console.log("Remove worked!");
+        $(this).parent().remove();
+    }
 
 function geocode_Complete(geoCodeRequest) {
 
@@ -125,10 +126,12 @@ function geoUserInput() {
     } else {
         console.log("Not ZERO");
     }
-};
+}
 
 
 $(function(){
+
     $("#submit").on("click", geoUserInput);
+
 
 });
