@@ -25,6 +25,8 @@
 // }
 
 
+var city =  0;
+var state = 0;
 
 
 // API Requests //
@@ -47,14 +49,15 @@ function geoCodeRequest(zipCode){
 
 // Completed Functions // 
 
-function darksky_Complete(darkskyRequest) {
+function darksky_Complete(geocode_Complete) {
 
-    var temp = darkskyRequest.currently.temperature;
-    var maxTemp = darkskyRequest.daily.data[0].temperatureMax;
-    var minTemp = darkskyRequest.daily.data[0].temperatureMin;
-    var precip = darkskyRequest.daily.data[0].precipProbability;
-
-    var hour1 = darkskyRequest.hourly.data[0];
+    var temp = geocode_Complete.currently.temperature;
+    var maxTemp = geocode_Complete.daily.data[0].temperatureMax;
+    var minTemp = geocode_Complete.daily.data[0].temperatureMin;
+    var precip = geocode_Complete.daily.data[0].precipProbability;
+    
+    
+    var hour1 = geocode_Complete.hourly.data[0];
     var time = new Date(hour1.time * 1000);
 
     console.log("Time: " + time.toLocaleString());
@@ -63,7 +66,7 @@ function darksky_Complete(darkskyRequest) {
     var templateHTML = '<div class="col-md-4 col-xs-12 col-sm-6 card">';
     templateHTML += '<span class="glyphicon glyphicon-minus-sign pull-right" id="remove"></span>';
     templateHTML += '<div class="thumbnail">';
-    templateHTML += '<h1 class="text-center">'+ 'Olive Hill, KY' +'</h1>';
+    templateHTML += '<h1 class="text-center">'+ city + ',' + state + '</h1>';
     templateHTML += '<h3 class="text-center">'+ 'Friday, September 21' +'</h3>';
     templateHTML += '<h2 class="text-center">'+ temp +'</h2>';
     templateHTML += '<div class="caption text-center">';
@@ -74,13 +77,14 @@ function darksky_Complete(darkskyRequest) {
     templateHTML += '</div>';
     templateHTML += '</div>';
 
+    $('#topRow').append(templateHTML);
+   
     $("#remove").on("click", removeCard);
     function removeCard(){
-    $(this).parent().remove();
     console.log("Remove worked!");
-}
+    $(this).parent().remove();
 
-    $('#topRow').append(templateHTML);
+}
 
 }
 
@@ -97,8 +101,8 @@ function geocode_Complete(geoCodeRequest) {
 
     var lat = geoCodeRequest.results[0].geometry.location.lat;
     var long = geoCodeRequest.results[0].geometry.location.lng;
-    var city = geoCodeRequest.results[0].address_components[1].long_name;
-    var state = geoCodeRequest.results[0].address_components[2].short_name;
+    city = geoCodeRequest.results[0].address_components[1].long_name;
+    state = geoCodeRequest.results[0].address_components[2].short_name;
 
     var darkskyRequest = {
     url: "https://api.darksky.net/forecast/ed7be92607845014ac1b22c8b2dcb545/" + lat + "," + long,
@@ -126,5 +130,5 @@ function geoUserInput() {
 
 $(function(){
     $("#submit").on("click", geoUserInput);
-    
+
 });
