@@ -108,7 +108,7 @@ function geocode_Complete(geoCodeRequest) {
     url: "https://api.darksky.net/forecast/ed7be92607845014ac1b22c8b2dcb545/" + lat + "," + long,
     dataType: "jsonp",
     success: darksky_Complete
-};
+ };
     $.ajax(darkskyRequest);
 }
 
