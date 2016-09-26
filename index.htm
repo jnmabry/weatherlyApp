@@ -39,10 +39,6 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<!-- Facebook Share Plugin -->
-
-<div class="fb-share-button" data-href="https://jnmabry.github.io/" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjnmabry.github.io%2F&amp;src=sdkpreparse">Share</a></div>
-
     <!--Nav Bar Contents-->
 
 <nav class="navbar navbar-fixed navbar-dark bg-inverse text-center">
@@ -60,10 +56,11 @@
       <div class="navbar-form navbar-right text-center">
                            <fieldset>
                         <label>Local Weather For:
-                <input type="text" maxlength="5" id="zipCode1" placeholder="Enter Zip Code"> <button id="zipSubmit">Submit</button>
+                <input type="text" maxlength="5" id="zipCode" placeholder="Enter Zip Code"> <button id="submit">Submit</button> 
             </label>
-                        
+            <label> <div class="fb-share-button push-right" data-href="https://jnmabry.github.io/" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjnmabry.github.io%2F&amp;src=sdkpreparse"><iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fjnmabry.github.io%2F&layout=button&size=large&mobile_iframe=true&width=73&height=28&appId" width="73" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe></a></div></label>
                     </fieldset>
+                     <!-- Facebook Share Plugin -->
       </div>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

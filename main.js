@@ -124,7 +124,7 @@ function geocode_Complete(geoCodeRequest) {
 
 // Sends zip after user input
 function geoUserInput() {
-    var zipCode = $("#zipCode1").val();
+    var zipCode = $("#zipCode").val();
     console.log(zipCode);
     if(zipCode != 0) {
         geoCodeRequest(zipCode);
