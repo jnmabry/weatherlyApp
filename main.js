@@ -63,6 +63,7 @@ function darksky_Complete(geocode_Complete) {
     
     var hour1 = geocode_Complete.hourly.data[0];
     var time = new Date(hour1.time * 1000);
+    time = time.toLocaleString();
 
     console.log("Time: " + time.toLocaleString());
     console.log("Made it to Dark Sky Complete");
@@ -71,7 +72,7 @@ function darksky_Complete(geocode_Complete) {
     templateHTML += '<span class="glyphicon glyphicon-minus-sign pull-right" id="remove"></span>';
     templateHTML += '<div class="thumbnail">';
     templateHTML += '<h1 class="text-center">'+ city + ',' + state + '</h1>';
-    templateHTML += '<h3 class="text-center">'+ 'Friday, September 21' +'</h3>';
+    templateHTML += '<h3 class="text-center">'+ time +'</h3>';
     templateHTML += '<h2 class="text-center">'+ temp + '&deg;'+'</h2>';
     templateHTML += '<div class="caption text-center">';
     templateHTML += '<span class="wi wi-umbrella"><h3>'+ precip + '</h3></span>';
@@ -123,7 +124,7 @@ function geocode_Complete(geoCodeRequest) {
 
 // Sends zip after user input
 function geoUserInput() {
-    var zipCode = $("#zipCode").val();
+    var zipCode = $("#zipCode1").val();
     console.log(zipCode);
     if(zipCode != 0) {
         geoCodeRequest(zipCode);
@@ -136,6 +137,7 @@ function geoUserInput() {
 $(function(){
 
     $("#submit").on("click", geoUserInput);
+    $("#zipSubmit").on("click", geoUserInput);
 
 
 });
