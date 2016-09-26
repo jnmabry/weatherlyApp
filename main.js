@@ -53,8 +53,11 @@ function geoCodeRequest(zipCode){
 function darksky_Complete(geocode_Complete) {
 
     var temp = geocode_Complete.currently.temperature;
+    temp = Math.round(temp);
     var maxTemp = geocode_Complete.daily.data[0].temperatureMax;
+    maxTemp = Math.round(maxTemp);
     var minTemp = geocode_Complete.daily.data[0].temperatureMin;
+    minTemp = Math.round(minTemp);
     var precip = geocode_Complete.daily.data[0].precipProbability;
 
     
@@ -69,7 +72,7 @@ function darksky_Complete(geocode_Complete) {
     templateHTML += '<div class="thumbnail">';
     templateHTML += '<h1 class="text-center">'+ city + ',' + state + '</h1>';
     templateHTML += '<h3 class="text-center">'+ 'Friday, September 21' +'</h3>';
-    templateHTML += '<h2 class="text-center">'+ temp +'</h2>';
+    templateHTML += '<h2 class="text-center">'+ temp + '&deg;'+'</h2>';
     templateHTML += '<div class="caption text-center">';
     templateHTML += '<span class="wi wi-umbrella"><h3>'+ precip + '</h3></span>';
     templateHTML += '<span class="wi wi-thermometer"><h3>' + maxTemp + '&deg;'+ '</h3></span>';
@@ -78,12 +81,13 @@ function darksky_Complete(geocode_Complete) {
     templateHTML += '</div>';
     templateHTML += '</div>';
 
-    $('#topRow').append(templateHTML)
+    $('#topRow').append(templateHTML);
 
     $("body").on("click", "#remove", function(){
         $(this).parent().remove();
     });
 
+    
 }
 
     function removeCard (){

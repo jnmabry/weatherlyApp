@@ -64,7 +64,7 @@ h3{
     color: cornflowerblue;
 }
 
-ul > span{
+#plus{
     font-size: 45px;
     color: #458782;
 }
@@ -73,7 +73,24 @@ ul > span{
     color: white;
 }
 
+#submit {
+    border-color: 0;
+    border: 0;
+    background-color: cornflowerblue;
+    border-radius: 10px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: white;
+}
+
 /* Containers */
+
+.container{
+    margin-top: 40px;
+}
 
 #topRow {
     margin-top: 0px;
@@ -110,4 +127,18 @@ body{
     padding-top: 10px;
     padding-right: 10px;
     font-size: 22px;
+}
+
+#collapsedSubmit{
+    border: 0;
+    border-color: white;
+}
+
+.navbar-form{
+    border: 0;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 25px;
+    letter-spacing: 1px;
 }

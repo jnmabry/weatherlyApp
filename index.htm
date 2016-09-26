@@ -28,30 +28,31 @@
 
 <body>
 
-<!--Nav Bar Contents-->
 
-<nav class="navbar navbar-fixed navbar-dark bg-inverse text-center">
-    <a class="navbar-brand text-center" id="logo">weather.ly</a><br />
 
-    <ul class="nav navbar-nav pull-right">
-        <li class="nav-item active">
-            <a class="nav-link" href="#">Local</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Regional</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">News</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Radar</a>
-        </li>
-        <span class="glyphicon glyphicon-plus-sign"></span>
-    </ul>
+    <nav class="navbar navbar-fixed navbar-dark bg-inverse text-center">
+        <a class="navbar-brand center" id="logo">weather.ly</a><br />
 
-</nav><br />
+        <ul class="nav navbar-nav pull-right">
+            <span class="glyphicon glyphicon-plus-sign navbar-toggler form-inline" data-toggle="collapse" data-target="#exCollapsingNavbar" aria-controls="exCollapsingNavbar"
+                aria-expanded="false" aria-label="Toggle navigation"></span>
+            <div class="collapse" id="exCollapsingNavbar">
+                <div class="bg-inverse p-a-1">
+                    <fieldset>
+                        <label>Local Weather For:
+                <input type="text" maxlength="5" id="zipCode" placeholder="Enter Your Zip Code">
+            </label>
+                        <br /> <br />
+                        <button id="submit">Submit</button>
+                        <br /> <br />
+                    </fieldset>
+                </div>
+        </ul>
+        
+            </div>
+    </nav><br />
 
-<!--Start of Body Contents-->
+    <!--Start of Body Contents-->
 
     <div class="container">
 
@@ -72,22 +73,42 @@
             </div>
         </div>
 
-<div class="row">
+    </div>
 
-<!--Test Section for Input of Zipcode-->
-<fieldset>
-            <label>Local Weather For:
-                <input type="text" maxlength="5" id="zipCode" placeholder="Enter Your Zip Code">
+
+
+
+    <!--Nav Bar Contents-->
+
+<!--<nav class="navbar navbar-fixed navbar-dark bg-inverse text-center">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" id="plus" class="navbar-toggle collapsed glyphicon glyphicon-plus-sign" data-toggle="collapse" data-target="#collapsedSubmit" aria-expanded="false">
+
+      </button>
+      <a class="navbar-brand center" id="logo">weather.ly</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse nav" id="collapsedSubmit">
+      <form class="navbar-form navbar-right">
+                           <fieldset>
+                        <label>Local Weather For:
+                <input type="text" maxlength="5" id="zipCode" placeholder="Enter Zip Code"> <button id="submit">Submit</button>
             </label>
-            <br /> <br />
-            <button id="submit">Submit</button>
-            <br /> <br />
-        </fieldset>
-        
-</div>
+                        
+                    </fieldset>
+      </form>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
 
     </div>
-<script src="main.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
