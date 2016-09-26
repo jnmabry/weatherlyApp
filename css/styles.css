@@ -88,6 +88,10 @@ h3{
 
 /* Containers */
 
+/*body{
+    background-image: url("../images/background.jpg");
+}*/
+
 .container{
     margin-top: 40px;
 }
